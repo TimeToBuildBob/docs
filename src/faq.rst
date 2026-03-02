@@ -35,7 +35,7 @@ How does ActivityWatch compare to RescueTime?
 ActivityWatch is a privacy-first, open-source alternative to RescueTime. Key differences:
 
 - **Data storage**: ActivityWatch keeps everything local on your device, while RescueTime sends data to their cloud servers.
-- **Platform support**: ActivityWatch supports Linux (which RescueTime dropped support for in 2024), plus Windows, macOS, and Android.
+- **Platform support**: ActivityWatch supports Linux (which RescueTime dropped support for around 2021), plus Windows, macOS, and Android.
 - **Price**: ActivityWatch is completely free. RescueTime charges $12/month for their premium tier.
 - **Extensibility**: ActivityWatch lets you write custom watchers and integrations. RescueTime is a closed system.
 - **Data access**: All your ActivityWatch data is always accessible. RescueTime's free tier limits how far back you can see.
