@@ -17,7 +17,7 @@ Yes. ActivityWatch is completely free and open-source software, licensed under t
 What platforms does ActivityWatch support?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-ActivityWatch runs on **Windows** (10 and later), **macOS** (10.15+), **Linux** (most distributions), and **Android**. Browser extensions are available for Chrome, Firefox, and Edge to track your web activity.
+ActivityWatch runs on **Windows**, **macOS**, **Linux**, and **Android**. Browser extensions are available for Chrome, Firefox, and Edge to track your web activity. macOS version and architecture support varies by release, so if you need a specific macOS build check the `downloads page <https://activitywatch.net/downloads/>`_ or the `GitHub release assets <https://github.com/ActivityWatch/activitywatch/releases>`_.
 
 Does ActivityWatch track my data privately?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
