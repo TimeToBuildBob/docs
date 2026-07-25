@@ -41,6 +41,7 @@ extensions = [
     "sphinx_tabs.tabs",
     "sphinx_click",
     "sphinxext.rediraffe",
+    "sphinxcontrib.jquery",
 ]
 
 extlinks = {
