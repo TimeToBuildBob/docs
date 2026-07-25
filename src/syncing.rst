@@ -18,8 +18,8 @@ app's private storage: ``Android/data/net.activitywatch.android/files/sync/``),
 but since Android 11 that directory is not accessible to other apps — so a
 file syncing tool like Syncthing cannot read from or write into it. In
 practice this means the app can produce its side of the sync data, but there
-is currently no supported way to get that data off the phone (pull from other
-devices) or onto it. Automatic background sync used to run unconditionally
+is currently no supported way to push that data to other devices or to pull
+other devices' data onto the phone. Automatic background sync used to run unconditionally
 every 15 minutes regardless of whether it could do anything useful; it is now
 gated behind a preference that defaults to off, so it no longer runs on fresh
 installs.
