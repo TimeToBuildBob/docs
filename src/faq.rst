@@ -76,6 +76,18 @@ Using this data (seconds since last input) we check if more than 3 minutes have 
 
 If the browser watcher is running, the user will also by default be considered to not be AFK when the active browser tab has sound playing from it. This helps when the user for example watches a video or is in a video/audio meeting.
 
+Can I change when ActivityWatch marks me as AFK?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Yes. The default AFK timeout is 3 minutes. To change it, open the ActivityWatch tray menu, choose the option to open the config folder, then edit ``aw-watcher-afk/aw-watcher-afk.toml``. Set ``timeout`` to the number of seconds without keyboard or mouse activity before ActivityWatch should mark you as AFK.
+For example, ``timeout = 300`` marks you as AFK after 5 minutes.
+
+If the setting is commented out, remove the leading ``#`` before saving.
+After saving the file, restart ActivityWatch or ``aw-watcher-afk`` for the change to take effect.
+
+If idle or locked-screen time is still counted as active time, first check that ``aw-watcher-afk`` is running and that the Timeline view shows an ``afk`` period while you are away.
+See :doc:`configuration` for the related ``aw-watcher-afk`` options.
+
 Why is the active window logged as "unknown" when using Wayland?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
