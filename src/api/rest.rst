@@ -5,6 +5,10 @@ ActivityWatch uses a REST API for all communication between aw-server and client
 Most applications should never use HTTP directly but should instead use the client libraries available.
 If no such library yet exists for a given language, this document is meant to provide enough specification to create one.
 
+If you are building an AI assistant or agent integration, start with
+:doc:`../examples/agents-and-ai` and prefer bounded, aggregated payloads over raw
+event access.
+
 .. warning::
     The API is currently under development, and is subject to change.
     It will be documented in better detail when first version has been frozen.
