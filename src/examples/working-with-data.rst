@@ -5,6 +5,9 @@ This guide covers how to retrieve and work with your ActivityWatch data, from si
 
 Most users will want to start with canonical events, which provide processed, meaningful activity data using the same logic as the web UI.
 
+If you want to use this data with an AI assistant, see :doc:`agents-and-ai` for
+privacy-first workflows that aggregate and review data before model access.
+
 .. contents:: 
    :local:
 
