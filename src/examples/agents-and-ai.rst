@@ -48,23 +48,31 @@ You can also use the Python client directly:
 
 .. code-block:: python
 
+   import socket
    from datetime import datetime
 
    from aw_client import ActivityWatchClient
-   from aw_client.queries import canonicalEvents
+   from aw_client.queries import DesktopQueryParams, canonicalEvents
 
    client = ActivityWatchClient("agent-summary", testing=False)
-   start = datetime.fromisoformat("2026-08-03T08:00:00")
-   end = datetime.fromisoformat("2026-08-03T12:00:00")
+   start = datetime.fromisoformat("2026-08-03T08:00:00").astimezone()
+   end = datetime.fromisoformat("2026-08-03T12:00:00").astimezone()
+   hostname = socket.gethostname()
 
-   events = canonicalEvents(client, start, end)
+   query = canonicalEvents(
+       DesktopQueryParams(
+           bid_window=f"aw-watcher-window_{hostname}",
+           bid_afk=f"aw-watcher-afk_{hostname}",
+       )
+   )
+   events = client.query(f"{query}\nRETURN = events;", [(start, end)])[0]
 
    category_seconds = {}
    app_seconds = {}
    for event in events:
-       seconds = event.duration.total_seconds()
-       category = tuple(event.data.get("$category", ["Uncategorized"]))
-       app = event.data.get("app", "unknown")
+       seconds = event["duration"]
+       category = tuple(event["data"].get("$category", ["Uncategorized"]))
+       app = event["data"].get("app", "unknown")
        category_seconds[category] = category_seconds.get(category, 0) + seconds
        app_seconds[app] = app_seconds.get(app, 0) + seconds
 
